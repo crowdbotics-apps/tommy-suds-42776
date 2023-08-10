@@ -1,33 +1,22 @@
-import React from "react"
-import {
-  View,
-  Image,
-  Text,
-  ScrollView,
-  SafeAreaView,
-  StyleSheet
-} from "react-native"
+import { ImageBackground } from "react-native";
+import React from "react";
+import { View, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
 const WelcomeScreen = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollView}>
+  return <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollView} style={styles.pWAHyyMU}>
         <View style={styles.group} />
-        <View style={styles.group}>
-          <Image style={styles.logo} source={require("./logo.png")} />
-          <Text style={styles.text}>
-            Let's build something amazing together!
-          </Text>
-        </View>
-        <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
-      </ScrollView>
-    </SafeAreaView>
-  )
-}
+        
+        
+      <ImageBackground style={styles.RXpGIpCx} source={{
+        uri: "https://tommysudslaundrycom.files.wordpress.com/2023/08/111marshall-williams-pypzioj-kks-unsplash-1.jpg"
+      }} resizeMode="stretch"></ImageBackground></ScrollView>
+    </SafeAreaView>;
+};
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#F8F8FC",
+    backgroundColor: "#d9ecff",
     height: "100%"
   },
   scrollView: {
@@ -37,28 +26,19 @@ const styles = StyleSheet.create({
     padding: 20
   },
   group: {
-    alignItems: "center"
+    alignItems: "center",
+    width: 309,
+    height: 89
   },
-  logo: {
-    height: 180,
-    width: 180,
-    padding: 40,
-    borderRadius: 30,
-    margin: 40
+  pWAHyyMU: {
+    position: "relative"
   },
-  text: {
-    textAlign: "center",
-    fontSize: 28,
-    color: "#828AB0",
-    fontWeight: 700
-  },
-  footer: {
-    textAlign: "center",
-    fontSize: 18,
-    color: "#828AB0",
-    fontWeight: 700,
-    marginBottom: 20
+  RXpGIpCx: {
+    width: 400,
+    height: 664,
+    position: "absolute",
+    top: -25,
+    left: -22
   }
-})
-
-export default WelcomeScreen
+});
+export default WelcomeScreen;
