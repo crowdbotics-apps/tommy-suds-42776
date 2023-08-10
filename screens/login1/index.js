@@ -6,7 +6,7 @@ const pressed = () => {
   console.log("pressed");
 };
 
-const LoginScreen = params => {
+const LoginScreen = () => {
   return <View style={styles.container}>
       <View style={styles.topSection}>
         <Text style={styles.headingTxt}>Sign In</Text>
@@ -68,13 +68,8 @@ const styles = StyleSheet.create({
   }
 });
 
-const Button = ({
-  title,
-  btnStyle,
-  textStyle,
-  onPress
-}) => {
-  return <TouchableOpacity style={[btnStyles.btn, btnStyle]} onPress={onPress}>
+const Button = ({}) => {
+  return <TouchableOpacity style={[btnStyles.btn, btnStyle]} onPress={() => {}}>
       <Text style={[btnStyles.btnText, textStyle]}>{title}</Text>
     </TouchableOpacity>;
 };
